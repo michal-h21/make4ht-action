@@ -16,7 +16,6 @@ RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
     make luatex texlive-base texlive-luatex texlive-latex-extra \
     tidy texlive-extra-utils python-pygments \
-    # texlive-fonts-recommended \
     texlive-plain-generic texlive-generic-recommended \
     pandoc latexmk texlive lmodern fonts-lmodern tex-gyre fonts-texgyre \
     texlive-lang-english && \
