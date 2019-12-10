@@ -14,9 +14,9 @@ runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    - config-file: ${{ inputs.config-file }}
-    - filename: ${{ inputs.filename }}
-    - command: ${{ inputs.command }}
+    config-file: ${{ inputs.config-file }}
+    filename: ${{ inputs.filename }}
+    command: ${{ inputs.command }}
 
 
 
