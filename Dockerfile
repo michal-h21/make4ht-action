@@ -15,7 +15,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
     make luatex texlive-base texlive-luatex texlive-latex-extra \
-    tidy texlive-extra-utils python3-pygments dvisvgm \
+    tidy texlive-extra-utils python3-pygments python3-setuptools dvisvgm \
     texlive-plain-generic texlive-generic-recommended \
     pandoc latexmk texlive lmodern fonts-lmodern tex-gyre fonts-texgyre \
     texlive-lang-english && \
