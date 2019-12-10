@@ -1,8 +1,22 @@
-name: "LaTeX to XML"
-description: "Convert LaTeX documents to XML with make4ht"
+name: "make4ht-action"
+author: "Michal Hoftich"
+description: "Convert TeX documents to XML using make4ht"
+inputs:
+  config-file:
+    description: "TeX4ht configuration file"
+    required: false
+  filename:
+    description: "TeX filename"
+    required: false
+  command:
+    description: "Direct make4ht command"
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    - config-file: ${{ inputs.config-file }}
+    - filename: ${{ inputs.filename }}
+    - command: ${{ inputs.command }}
 
 
 
