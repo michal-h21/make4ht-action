@@ -17,6 +17,7 @@ RUN apt-get update && \
     tidy texlive-extra-utils python3-pygments python3-setuptools dvisvgm \
     texlive-plain-generic texlive-generic-recommended \
     pandoc latexmk lmodern fonts-lmodern tex-gyre fonts-texgyre \
+    default-jre zip \
     texlive-lang-english && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
