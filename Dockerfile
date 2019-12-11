@@ -13,7 +13,7 @@ LABEL "com.github.actions.color"="blue"
 # Install all TeX and LaTeX dependencies
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
-    make luatex texlive-base texlive-luatex texlive-latex-extra \
+    make luatex texlive texlive-base texlive-luatex texlive-latex-extra \
     tidy texlive-extra-utils python3-pygments python3-setuptools dvisvgm \
     texlive-plain-generic texlive-generic-recommended \
     pandoc latexmk lmodern fonts-lmodern tex-gyre fonts-texgyre \
