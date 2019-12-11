@@ -2,21 +2,18 @@ name: "make4ht-action"
 author: "Michal Hoftich"
 description: "Convert TeX documents to XML using make4ht"
 inputs:
-  config-file:
-    description: "TeX4ht configuration file"
-    required: false
-  filename:
-    description: "TeX filename"
-    required: false
   command:
     description: "Direct make4ht command"
+    required: true
+  extra-packages:
+    description: "Extra packages installed using apt-get"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    config-file: ${{ inputs.config-file }}
-    filename: ${{ inputs.filename }}
     command: ${{ inputs.command }}
+    extra-packages: ${{ inputs.extra-packages }}
 
 
 
