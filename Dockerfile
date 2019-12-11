@@ -10,6 +10,10 @@ LABEL "com.github.actions.icon"="code"
 LABEL "com.github.actions.color"="blue"
 
 ENV DEBIAN_FRONTEND noninteractive
+# extra packages installes using apt-get
+ENV extra-packages 
+# make4ht command to be executed
+ENV command
 
 # Install all TeX and LaTeX dependencies
 RUN apt-get update && \
