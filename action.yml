@@ -5,8 +5,11 @@ inputs:
   command:
     description: "Direct make4ht command"
     required: true
-  extra-packages:
+  extra_packages:
     description: "Extra packages installed using apt-get"
+    required: false
+  output_dir:
+    description: "Output directory for the HTML files"
     required: false
 runs:
   using: "docker"
