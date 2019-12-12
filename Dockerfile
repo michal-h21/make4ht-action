@@ -9,20 +9,23 @@ LABEL "com.github.actions.description"="Convert LaTeX documents to XML with make
 LABEL "com.github.actions.icon"="code"
 LABEL "com.github.actions.color"="blue"
 
+ENV DEBIAN_FRONTEND noninteractive
+
+# Fix openjre installation isssue
+RUN mkdir -p /usr/share/man/man1
 
 # Install all TeX and LaTeX dependencies
 RUN apt-get update && \
-    apt-get install --yes --no-install-recommends \
+    apt-get install --yes -y --no-install-recommends \
     make luatex texlive texlive-base texlive-luatex texlive-latex-extra \
     tidy texlive-extra-utils python3-pygments python3-setuptools dvisvgm \
     texlive-plain-generic texlive-generic-recommended \
     pandoc latexmk lmodern fonts-lmodern tex-gyre fonts-texgyre \
-    default-jre zip \
+    default-jre-headless zip \
     texlive-lang-english && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV DEBIAN_FRONTEND noninteractive
 ENV filename "sample.tex"
 # extra packages installes using apt-get
 ENV extra_packages ""
