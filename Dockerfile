@@ -17,7 +17,7 @@ RUN mkdir -p /usr/share/man/man1
 # Install all TeX and LaTeX dependencies
 RUN apt-get update && \
     apt-get install --yes -y --no-install-recommends \
-    make luatex texlive texlive-base texlive-luatex texlive-latex-extra \
+    make luatex texlive texlive-base texlive-luatex texlive-latex-extra context \
     tidy texlive-extra-utils python3-pygments python3-setuptools dvisvgm \
     texlive-plain-generic texlive-generic-recommended \
     pandoc latexmk lmodern fonts-lmodern tex-gyre fonts-texgyre \
