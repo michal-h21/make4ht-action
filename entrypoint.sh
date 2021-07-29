@@ -4,8 +4,8 @@ then
   apt-get install $extra_packages
 fi
 
-# debugging messages
+export TEXINPUTS=.:/root/texmf//:
 echo $command
-( TEXINPUTS=.:/root/texmf//: $command )
+eval $command
 
 
