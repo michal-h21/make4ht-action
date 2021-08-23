@@ -14,7 +14,7 @@ Actions.
 
 Sample `.github/workflows/main.yml` file:
 
-```
+```yaml
 name: CI 
 on: [push] 
 jobs: 
@@ -33,7 +33,6 @@ jobs:
        publish_dir: ./out 
 ```
 
-
-This worflow compiles file `main.tex` useing `make4ht`. The resulting
+This worflow compiles file `main.tex` using `make4ht`. The resulting
 `main.html` file is placed in the `out` directory, which is then served using
 Github Pages.
