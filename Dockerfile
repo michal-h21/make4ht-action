@@ -40,6 +40,7 @@ ENV command "make4ht -ulm draft -d $output_dir $filename"
 
 ADD entrypoint.sh /entrypoint.sh
 
+
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["sh", "/entrypoint.sh"]
