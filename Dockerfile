@@ -22,7 +22,7 @@ RUN apt-get update && \
     texlive-plain-generic texlive-plain-generic context \
     pandoc latexmk lmodern fonts-lmodern tex-gyre fonts-texgyre \
     default-jre-headless zip git \
-    texlive-lang-english && \
+    texlive-lang-all && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
     # rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     git clone https://github.com/michal-h21/make4ht && \
