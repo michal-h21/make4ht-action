@@ -18,7 +18,8 @@ RUN mkdir -p /usr/share/man/man1
 RUN apt-get update && \
     apt-get install --yes -y --no-install-recommends \
     make luatex texlive texlive-base texlive-luatex texlive-latex-extra context \
-    tidy texlive-extra python3-pygments python3-setuptools dvisvgm \
+    tidy texlive-extra-utils python3-pygments python3-setuptools dvisvgm \
+    texlive-science texlive-games texlive-humanities texlive-music texlive-publishers texlive-science \
     texlive-plain-generic texlive-plain-generic context \
     pandoc latexmk lmodern fonts-lmodern tex-gyre fonts-texgyre \
     default-jre-headless zip git \
