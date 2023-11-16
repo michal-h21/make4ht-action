@@ -25,7 +25,6 @@ RUN apt-get update && \
     default-jre-headless zip git \
     texlive-lang-all && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
-    # rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     git clone https://github.com/michal-h21/make4ht && \
     cd make4ht && \
     make justinstall SUDO="" 
