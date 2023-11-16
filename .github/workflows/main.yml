@@ -18,11 +18,10 @@ jobs:
         with:
           username: "michal-h21"
           password: ${{ secrets.PAT }}
-
+          registry: ghcr.io
+          repository: michal-h21/make4ht-action
       - name: 'Build:dockerimage'
         uses: docker/build-push-action@v5
         with:
           push: true
-          registry: ghcr.io
-          repository: michal-h21/make4ht-action
           tags: latest
